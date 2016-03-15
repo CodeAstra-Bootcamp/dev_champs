@@ -3,8 +3,14 @@ body {
 }
 
 .navbar-default {
+  transition: background-color 0.5s ease-in;
   background-color: transparent;
   border-color: transparent;
+}
+
+.navbar-default.affix {
+  background-color: #16191C;
+  border-color: #16191C;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
@@ -44,6 +50,50 @@ body {
   background-color: #bdc3c7;
   border: 1px solid #bdc3c7;
   color: #2c3e50;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
+  padding: 15vh 0;
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 2vw;
+    margin-bottom: 10vh;
+  }
+
+  .project {
+    margin-bottom: 2em;
+    position: relative;
+
+    .glyphicon {
+      display: none;
+    }
+  }
+
+  .project:hover .glyphicon {
+    display: inline-block;
+    color: #ecf0f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3em;
+  }
+
+  .project::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in;
+  }
+
+  .project:hover::after {
+    background-color: rgba(30, 30, 30, 0.6);
+  }
 }
