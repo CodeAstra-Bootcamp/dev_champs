@@ -85,4 +85,40 @@ body {
   #work .project:hover::after {
     background-color: rgba(30, 30, 30, 0.6); }
 
+#team {
+  background-color: #8e44ad;
+  color: #ecf0f1;
+  padding: 15vh 0; }
+  #team h1 {
+    font-size: 8vmin;
+    margin-bottom: 8vh;
+    text-align: center; }
+  #team .person {
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: transparent;
+    box-shadow: 6px 6px 12px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in;
+    text-align: center; }
+    #team .person .name, #team .person .role {
+      text-align: center; }
+    #team .person .name {
+      font-size: 1.5em;
+      font-weight: bold; }
+    #team .person .role {
+      font-size: 1.2em; }
+  #team .person:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 6px 18px rgba(255, 255, 255, 0.5); }
+  @media (min-width: 992px) {
+    #team .person .name {
+      text-align: left; }
+    #team .person .role {
+      text-align: right; } }
+  @media (min-width: 1200px) {
+    #team .person .name, #team .person .role {
+      text-align: left; } }
+
 /*# sourceMappingURL=styles.css.map */

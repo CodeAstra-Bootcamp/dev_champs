@@ -121,3 +121,64 @@ body {
     background-color: rgba(30, 30, 30, 0.6);
   }
 }
+
+#team {
+  background-color: #8e44ad;
+  color: #ecf0f1;
+  padding: 15vh 0;
+
+  h1 {
+    font-size: 8vmin;
+    margin-bottom: 8vh;
+    text-align: center;
+  }
+
+  .person {
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: transparent;
+    box-shadow: 6px 6px 12px rgba(255,255,255,0.3);
+    transition: all 0.3s ease-in;
+    text-align: center;
+
+    .name, .role {
+      text-align: center;
+    }
+
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .role {
+      font-size: 1.2em;
+    }
+  }
+
+  .person:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 6px 18px rgba(255,255,255,0.5);
+  }
+
+  @media (min-width: 992px) {
+    .person {
+      .name {
+        text-align: left;
+      }
+
+      .role {
+        text-align: right;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .person {
+      .name, .role {
+        text-align: left;
+      }
+    }
+  }
+}
